@@ -1,0 +1,25 @@
+{
+  "name": "continuous-md-pdf",
+  "version": "1.0.0",
+  "description": "离线 Markdown 连续单页 PDF 转换器",
+  "author": "Markdown PDF",
+  "license": "MIT",
+  "main": "src/main.js",
+  "dependencies": {
+    "highlight.js": "11.11.1",
+    "katex": "0.18.2",
+    "markdown-it": "14.3.1",
+    "markdown-it-abbr": "2.0.0",
+    "markdown-it-attributes": "1.2.0",
+    "markdown-it-container": "4.0.0",
+    "markdown-it-footnote": "4.0.0",
+    "markdown-it-imsize": "2.0.1",
+    "markdown-it-mark": "4.0.0",
+    "markdown-it-multimd-table": "4.2.3",
+    "markdown-it-sub": "2.0.0",
+    "markdown-it-sup": "2.0.0",
+    "markdown-it-task-lists": "2.1.1",
+    "pdf-lib": "1.17.1",
+    "sanitize-html": "2.17.0"
+  }
+}

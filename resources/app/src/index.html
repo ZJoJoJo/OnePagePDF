@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; frame-src file:;"><title>Markdown 连续PDF</title><link rel="stylesheet" href="app.css"></head>
+<body><aside>
+  <div class="brand"><span class="logo">M↓</span><div><strong>Markdown 连续PDF</strong><small>让笔记完整地展开</small></div></div>
+  <div class="section-label">文档</div><button id="choose" class="choose">＋ 选择 Markdown 文件</button>
+  <div id="filename" class="filename">尚未选择文件</div><div id="filepath" class="filepath">支持 .md / .markdown</div>
+  <div class="section-label">版面设置</div>
+  <label>版面宽度 <span>像素</span><select id="width"><option value="794">794 · A4 宽度</option><option value="900" selected>900 · 舒适阅读</option><option value="1100">1100 · 宽版公式</option><option value="1400">1400 · 多栏笔记</option></select></label>
+  <label>正文字号 <span>像素</span><select id="fontSize"><option value="14">14 · 紧凑</option><option value="16" selected>16 · 标准</option><option value="18">18 · 大字</option><option value="20">20 · 更大</option></select></label>
+  <label>页面留白 <span>像素</span><select id="padding"><option value="24">24 · 紧凑</option><option value="40" selected>40 · 标准</option><option value="64">64 · 宽松</option></select></label>
+  <button id="refresh" disabled>↻ 重新读取并预览</button>
+  <div class="mode"><span class="dot"></span><strong>连续单页</strong><p>高度随内容延伸，图片与正文连续排布。</p></div>
+  <button id="export" class="primary" disabled>导出连续 PDF →</button><button id="reveal" hidden>打开输出文件夹</button>
+  <p class="offline">本地渲染 · 无需联网<br>移动 Markdown 时请一并保留图片文件夹</p>
+</aside><main>
+  <header><div><strong id="preview-title">文档预览</strong><span id="stats">选择文件，开始生成</span></div><span class="badge">ONE PAGE</span></header>
+  <div id="status" role="status">准备就绪</div><details id="warnings" hidden><summary>渲染提示</summary><pre id="warning-text"></pre></details>
+  <div class="preview-area"><div id="empty"><div class="document-icon">↧</div><h1>把长笔记，变成一张长 PDF</h1><p>保留图片、数学公式、表格与提示框。<br>在左侧选择 Markdown，预览确认后导出。</p><div class="chips"><span>中文排版</span><span>LaTeX 公式</span><span>本地图片</span></div></div><iframe id="preview" title="Markdown 文档预览" sandbox="allow-same-origin" hidden></iframe></div>
+</main><script src="ui.js"></script></body></html>
